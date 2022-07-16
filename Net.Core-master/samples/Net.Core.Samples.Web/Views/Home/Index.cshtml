@@ -1,0 +1,28 @@
+﻿@model net.core.Samples.Web.Models.HomeViewModels.IndexViewModel
+@{ ViewData["Title"] = "Customers"; }
+
+<table>
+    <tr>
+
+        <th style="width:240px;margin-left:30px; margin-right:30px;"> ID</th>
+        <th style="width:240px;margin-left:30px; margin-right:30px;">Name</th>
+        <th style="width:240px;margin-left:30px; margin-right:30px;">Surname</th>
+        <th style="width:240px;margin-left:30px; margin-right:30px;">Link</th>
+
+
+    </tr>
+    @foreach (var item in Model.Customers)
+    {
+<tr>
+
+    <td style="width:240px;margin-left:30px; margin-right:30px;">@item.ID</td>
+    <td style="width:240px;margin-left:30px; margin-right:30px;">@item.Name</td>
+    <td style="width:240px;margin-left:30px; margin-right:30px;">@item.Surname</td>
+
+    <td onclick="location.href = '@(Url.Action( "Customer","Home", new { customerID = item.ID }))'">
+        Details
+    </td>
+
+</tr>
+}
+</table>

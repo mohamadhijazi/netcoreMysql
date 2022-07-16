@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Core.Common\Net.Core.Common.csproj" />
+    <ProjectReference Include="..\Net.Core.DAO\Net.Core.DAO.csproj" />
+  </ItemGroup>
+
+</Project>
