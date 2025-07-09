@@ -1,0 +1,3 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+This workspace is a modular web application using .NET 8 (backend), MySQL (database), Vue.js (frontend), and Python FastAPI microservices for CPU/GPU processing. Prioritize modularity, extensibility, and security. Use dependency injection, interface-based services, and provider/hardware switching patterns. All sensitive data must be stored securely (appsettings.json or Azure Key Vault). Document all new modules and APIs clearly. Use the MySQL schema in db/schema.sql for all persistent data.

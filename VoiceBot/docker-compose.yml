@@ -1,0 +1,49 @@
+version: '4.0'
+services:
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: voicebot
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../docker/Dockerfile.backend
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    depends_on:
+      - mysql
+      - python
+    ports:
+      - "5000:8080"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../docker/Dockerfile.frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+  python:
+    build:
+      context: ./python-services
+      dockerfile: ../docker/Dockerfile.python
+    # To enable GPU, uncomment the next two lines and ensure your system supports NVIDIA GPU passthrough
+    # environment:
+    #   - NVIDIA_VISIBLE_DEVICES=all
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - capabilities: [gpu]
+    environment:
+      - PROVIDER_MODE=cpu  # Explicitly set to CPU mode for business requirements
+    ports:
+      - "8000:8000"

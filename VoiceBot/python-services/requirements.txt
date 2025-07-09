@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+torch
+python-multipart
+# Add whisper, elevenlabs, ollama, etc. as needed
