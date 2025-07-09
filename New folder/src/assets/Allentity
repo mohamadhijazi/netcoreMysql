@@ -1,0 +1,618 @@
+[
+  {
+    "Type": "Dimension",
+    "Name": "Data",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Quality", "Freshness", "Trustworthiness", "Coverage Depth"],
+    "Dimension_Levels": {
+      "Data": 5,
+      "Time": 2,
+      "People": 1,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Dimension",
+    "Name": "Time",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Political Stability", "Historical Trends", "Future Projections", "Peace Index", "Economic Growth", "Policy Impact"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 5,
+      "People": 2,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Dimension",
+    "Name": "People",
+    "Shape": "Vertical",
+    "Quantitative_Attributes": ["Happiness Index", "Work Efficacy", "Core Competencies", "Age Demographics", "Gender Balance", "Social Stability", "Public Health", "Education Attainment", "Transportation Access", "Housing Availability"],
+    "Dimension_Levels": {
+      "Data": 1,
+      "Time": 2,
+      "People": 5,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Dimension",
+    "Name": "Money",
+    "Shape": "Vertical",
+    "Quantitative_Attributes": ["Spending Behavior", "Income Levels", "Financial Growth", "Forecast Accuracy", "Investment Trends", "Trading Volume", "GDP Growth"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 3,
+      "People": 2,
+      "Money": 5
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Market Need",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Target Audience", "Expected Spending Ranges", "Time-to-Market", "Competitive Landscape", "Leader Benchmarking"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 2,
+      "People": 3,
+      "Money": 4
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Demand/Change",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Market Signals", "Change Drivers", "Opportunity Identification"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 4,
+      "People": 3,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Business Case",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Rationale", "ROI Projections", "Risk Assessment"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 3,
+      "People": 2,
+      "Money": 4
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Portfolio/Programs",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Program Inventory", "Investment Priorities", "Synergy Analysis"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 3,
+      "People": 3,
+      "Money": 4
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Projects/Product Dev",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Project Pipeline", "Development Phases", "Resource Allocation", "Start Date", "End Date", "Project Manager", "Budget"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 4,
+      "People": 3,
+      "Money": 4
+    },
+    "childRowData": [
+      {
+        "StartDate": "2023-01-01",
+        "EndDate": "2023-06-30",
+        "ProjectName": "New Product Launch",
+        "ProjManager": "Alice Smith",
+        "Budget": "500000"
+      },
+      {
+        "StartDate": "2023-03-15",
+        "EndDate": "2024-02-28",
+        "ProjectName": "System Upgrade Phase 2",
+        "ProjManager": "Bob Johnson",
+        "Budget": "750000"
+      }
+    ]
+  },
+  {
+    "Type": "Entity",
+    "Name": "Payments",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Payment Systems", "Revenue Channels", "Transaction Metrics"],
+    "Dimension_Levels": {
+      "Data": 4,
+      "Time": 2,
+      "People": 2,
+      "Money": 5
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Outcome",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Impact Measures", "Deliverables", "Strategic Benefits"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 3,
+      "People": 3,
+      "Money": 4
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Benefits",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Expected Value", "Actual Realization", "Target Date", "Achieved ROI", "Stakeholder Impact"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 3,
+      "People": 4,
+      "Money": 5
+    },
+    "childRowData": [
+      {
+        "BenefitName": "Cost Savings Initiative",
+        "ExpectedValue": 100000,
+        "ActualRealization": 85000,
+        "TargetDate": "2023-12-31",
+        "AchievedROI": "85%",
+        "StakeholderImpact": "High"
+      },
+      {
+        "BenefitName": "Customer Experience Improvement",
+        "ExpectedValue": null,
+        "ActualRealization": null,
+        "TargetDate": "2024-06-30",
+        "AchievedROI": null,
+        "StakeholderImpact": "Medium"
+      }
+    ]
+  },
+  {
+    "Type": "Entity",
+    "Name": "KPI",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Key Metrics", "Thresholds", "Monitoring Cadence"],
+    "Dimension_Levels": {
+      "Data": 5,
+      "Time": 3,
+      "People": 2,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Planning",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Scenario Plans", "Budget Cycles", "Strategic Roadmaps"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 4,
+      "People": 3,
+      "Money": 4
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Goals",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Corporate Objectives", "Success Criteria", "Long-term Vision"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 4,
+      "People": 3,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Governance",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Policy Framework", "Accountability Structures", "Audit Coverage"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 3,
+      "People": 4,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Org structure",
+    "Shape": "Vertical",
+    "Quantitative_Attributes": [],
+    "Dimension_Levels": {
+      "Data": 1,
+      "Time": 2,
+      "People": 5,
+      "Money": 1
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Board",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Board Composition", "Decision Agility", "Governance Role"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 3,
+      "People": 4,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Sectors (HR, Fin, CIO, COO, CEO)",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Functional Alignment", "Cross-Sector Integration"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 2,
+      "People": 4,
+      "Money": 4
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "General Departments",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Operational Units", "Support Teams", "Strategic Offices"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 2,
+      "People": 4,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Departments/Units",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Department Structures", "Unit Functions", "Efficiency Ratings"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 2,
+      "People": 4,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Employees",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Headcount", "Diversity Measures", "Retention Rates"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 2,
+      "People": 5,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Vendors/Partners",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Supplier Strength", "Strategic Partnerships", "SLA Compliance"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 2,
+      "People": 3,
+      "Money": 4
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Change / Performance / Strategy",
+    "Shape": "Vertical",
+    "Quantitative_Attributes": ["Strategic Initiatives", "Change Management", "Performance Indicators"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 4,
+      "People": 4,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Employee Capability",
+    "Shape": "Vertical",
+    "Quantitative_Attributes": ["Skill Inventory", "Training Plans", "Talent Gaps"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 2,
+      "People": 5,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Products/Services",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Core Offerings", "Value Proposition", "Product Portfolio"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 3,
+      "People": 4,
+      "Money": 4
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Biz Capabilities",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Innovation Capacity", "Agility", "Strategic Alignment"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 3,
+      "People": 3,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Application",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Software Portfolio", "Usage Scope", "Business Relevance", "Version", "Dependencies", "Hosting Environment", "User Count", "Integration Points"],
+    "Dimension_Levels": {
+      "Data": 4,
+      "Time": 2,
+      "People": 3,
+      "Money": 3
+    },
+    "childRowData": [
+      {
+        "AppName": "CRM System",
+        "Version": "3.2",
+        "HostingEnvironment": "Cloud",
+        "UserCount": 500,
+        "IntegrationPoints": ["ERP", "Marketing Automation"],
+        "BusinessRelevance": "High"
+      },
+      {
+        "AppName": "HR Payroll System",
+        "Version": "2.1",
+        "HostingEnvironment": "On-Premise",
+        "UserCount": 1500,
+        "IntegrationPoints": ["Finance", "Time Tracking"],
+        "BusinessRelevance": "Critical"
+      }
+    ]
+  },
+  {
+    "Type": "Entity",
+    "Name": "Process",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Workflow Efficiency", "Standardization", "Process Bottlenecks"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 3,
+      "People": 3,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Procedure",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Compliance Procedures", "Review Cycles", "Execution Timelines"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 3,
+      "People": 2,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Policies",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Governance Policies", "Data Handling", "HR Guidelines"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 2,
+      "People": 4,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Digital",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Digital Strategy", "Transformation Scope", "Maturity Level"],
+    "Dimension_Levels": {
+      "Data": 4,
+      "Time": 3,
+      "People": 2,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "IT Tools",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Software Suites", "Hardware Infrastructure", "Tech Components", "Vendor", "Model", "Lifecycle Stage", "Maintenance Schedule", "Procurement Date"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 3,
+      "People": 2,
+      "Money": 4
+    },
+    "childRowData": [
+      {
+        "ToolName": "Enterprise Server",
+        "Vendor": "Dell",
+        "Model": "PowerEdge R740",
+        "LifecycleStage": "Production",
+        "MaintenanceSchedule": "Monthly",
+        "ProcurementDate": "2020-03-15"
+      },
+      {
+        "ToolName": "Network Switch",
+        "Vendor": "Cisco",
+        "Model": "Catalyst 9300",
+        "LifecycleStage": "Deployment",
+        "MaintenanceSchedule": "Quarterly",
+        "ProcurementDate": "2022-09-01"
+      }
+    ]
+  },
+  {
+    "Type": "Entity",
+    "Name": "Network",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Connectivity Health", "Network Security", "Redundancy Plans"],
+    "Dimension_Levels": {
+      "Data": 4,
+      "Time": 2,
+      "People": 1,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Storage",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Data Storage Capacity", "Backup Protocols", "Security Standards"],
+    "Dimension_Levels": {
+      "Data": 5,
+      "Time": 2,
+      "People": 1,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "ITGovernance",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Leadership Structure", "Oversight Mechanisms", "Decision Pathways"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 3,
+      "People": 4,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Processing",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Automation Levels", "Processing Speed", "Error Handling"],
+    "Dimension_Levels": {
+      "Data": 4,
+      "Time": 4,
+      "People": 1,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "Practise",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Best Practices", "Benchmarking", "Operational Rituals"],
+    "Dimension_Levels": {
+      "Data": 2,
+      "Time": 3,
+      "People": 4,
+      "Money": 2
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "AI / Analysis",
+    "Shape": "Horizontal",
+    "Quantitative_Attributes": ["Machine Learning Models", "Predictive Analytics", "Insights Framework", "Data Sources", "Algorithms Used", "Deployment Status", "Accuracy Metrics", "Model Performance", "Training Data Size"],
+    "Dimension_Levels": {
+      "Data": 5,
+      "Time": 3,
+      "People": 2,
+      "Money": 3
+    },
+    "childRowData": [
+      {
+        "ModelName": "Customer Churn Prediction",
+        "AlgorithmUsed": "Random Forest",
+        "DeploymentStatus": "Active",
+        "AccuracyMetrics": "92%",
+        "TrainingDataSize": "1 TB",
+        "DataSources": ["CRM Data", "Web Logs"]
+      },
+      {
+        "ModelName": "Sales Forecasting",
+        "AlgorithmUsed": "ARIMA",
+        "DeploymentStatus": "Training",
+        "AccuracyMetrics": null,
+        "TrainingDataSize": "500 GB",
+        "DataSources": ["Historical Sales Data"]
+      }
+    ]
+  },
+  {
+    "Type": "Entity",
+    "Name": "System",
+    "Shape": "Vertical",
+    "Quantitative_Attributes": ["Operational Systems", "ERP Frameworks", "Integration Levels"],
+    "Dimension_Levels": {
+      "Data": 4,
+      "Time": 2,
+      "People": 2,
+      "Money": 3
+    },
+    "childRowData": []
+  },
+  {
+    "Type": "Entity",
+    "Name": "IT Capabilities",
+    "Shape": "Vertical",
+    "Quantitative_Attributes": ["Cloud Adoption", "AI Readiness", "Infrastructure Strength"],
+    "Dimension_Levels": {
+      "Data": 3,
+      "Time": 3,
+      "People": 2,
+      "Money": 3
+    },
+    "childRowData": []
+  }
+]

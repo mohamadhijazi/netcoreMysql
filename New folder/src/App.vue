@@ -88,11 +88,18 @@ function getClusterAttributes(cluster) {
 }
 function aggregateClusterAttribute(cluster, attr) {
   // Aggregate attribute across all entities in the cluster
-  let sum = 0, count = 0
+  let sum = 0, count = 0,values = []
   cluster.entities.forEach(entity => {
     const val = aggregateAttribute(entity, attr)
-    if (typeof val === 'number') { sum += val; count++ }
-  })
+    if (typeof val === 'number') { sum += val; count++ 
+     } else if (Array.isArray(val)) {
+          values.push(val.join(', '))
+        } else if (typeof val === 'string') {
+          values.push(val)
+        }
+  });
+  if (count > 0) return sum
+  if (values.length > 0) return values.join(', ')
   return count > 0 ? sum : '-'
 }
 
@@ -156,9 +163,9 @@ function aggregateAttribute(entity, attr, visited = new Set()) {
     entity.childRowData.forEach(row => {
       let v = row[attr]
       if (v != null) {
-        if (typeof v === 'string' && !isNaN(Number(v))) {
-          v = Number(v)
-        }
+         if (typeof v === 'string' && !isNaN(Number(v))) {
+           v = Number(v)
+      }
         if (typeof v === 'number' && !isNaN(v)) {
           sum += v; count++
         } else if (Array.isArray(v)) {
@@ -320,6 +327,7 @@ function getClusterAttributesLimited(cluster) {
               :style="{ left: clusterPositions[cluster.key]?.x + 'px', top: clusterPositions[cluster.key]?.y + 'px', borderColor: getClusterColorByKey(cluster), transition: 'left 0.3s, top 0.3s' }"
               @click="openEntity(cluster.entities[0])"
             >
+            <span>{{ cluster.entities[0].Name }}:</span>
               <div v-for="(attr, i) in getClusterAttributesLimited(cluster)" :key="attr" class="attr-row">
                 <span>{{ attr }}:</span>
                 <span>{{ aggregateClusterAttribute(cluster, attr) }}</span>
@@ -426,9 +434,9 @@ function getClusterAttributesLimited(cluster) {
 .dependency-lines {
   width: 2000px;
   height: 2000px;
-  position: relative;
+  position: absolute;
   pointer-events: none;
-  z-index: 1;
+  z-index: 6;
   display: block;
 }
 .entity-modal {
